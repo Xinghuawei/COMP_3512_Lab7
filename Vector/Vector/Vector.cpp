@@ -1,5 +1,11 @@
 #include "Vector.h"
 
+Vector::Vector() {
+	size = 0;
+	
+}
+
+
 int Vector::sum(const std::vector<int>& v) {
 	int sum{ 0 };
 	for (int i = 0; i < v.size(); i++) {
