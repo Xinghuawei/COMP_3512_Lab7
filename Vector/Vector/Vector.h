@@ -4,7 +4,6 @@ class Vector {
 private:
 	int size;
 
-	std::vector<int> v;
 public:
 	Vector();
 

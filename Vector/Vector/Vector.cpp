@@ -2,9 +2,13 @@
 
 Vector::Vector() {
 	size = 0;
-	
+	std::vector<int> v(size);
 }
 
+Vector::Vector(int n) {
+	size = n;
+	std::vector<int> v(n);
+}
 
 int Vector::sum(const std::vector<int>& v) {
 	int sum{ 0 };
