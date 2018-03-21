@@ -50,6 +50,23 @@ namespace VectorUnitTest
 		{
 			Assert::AreEqual((double)-1, s2.average(v2));
 		}
+		//-----------------------------------------------------------//
 
+		TEST_METHOD(SUM_VECTOR_SIZE_ONE)
+		{
+			Assert::AreEqual(5, s3.sum(v3));
+		}
+		TEST_METHOD(MAX_VECTOR_SIZE_ONE)
+		{
+			Assert::AreEqual(5, s3.max(v3));
+		}
+		TEST_METHOD(MIN_VECTOR_SIZE_ONE)
+		{
+			Assert::AreEqual(5, s3.min(v3));
+		}
+		TEST_METHOD(AVERAGE_VECTOR_SIZE_ONE)
+		{
+			Assert::AreEqual((double)5, s3.average(v3));
+		}
 	};
 }
