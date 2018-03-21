@@ -3,7 +3,7 @@
 int Vector::sum(const std::vector<int>& v) {
 	
 	if (v.empty()) {
-		return 0;
+		return -1;
 	} else {
 		int sum{ 0 };
 		for (int i = 0; i < v.size(); i++) {
@@ -18,7 +18,7 @@ int Vector::sum(const std::vector<int>& v) {
 int Vector::max(const std::vector<int>& v) {
 	
 	if (v.empty()) {
-		return 0;
+		return -1;
 	} else {
 		int largest = v[0];
 		for (int i = 0; i < v.size(); i++) {
@@ -35,7 +35,7 @@ int Vector::max(const std::vector<int>& v) {
 int Vector::min(const std::vector<int>& v) {
 	
 	if (v.empty()) {
-		return 0;
+		return -1;
 	} else {
 		int small = v[0];
 		for (int i = 1; i < v.size(); i++) {
@@ -52,7 +52,7 @@ double Vector::average(const std::vector<int>& v) {
 	
 	
 	if (v.empty()) {
-		return 0;
+		return -1;
 	} else {
 		double avg{ 0.0 };
 		double sum{ 0.0 };
