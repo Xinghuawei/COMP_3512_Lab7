@@ -1,56 +1,67 @@
 #include "Vector.h"
 
-Vector::Vector() {
-	size = 0;
-	std::vector<int> v(size);
-}
-
-Vector::Vector(int n) {
-	size = n;
-	std::vector<int> v(n);
-}
-
 int Vector::sum(const std::vector<int>& v) {
-	int sum{ 0 };
-	for (int i = 0; i < v.size(); i++) {
-		sum += v[i];
+	
+	if (v.empty()) {
+		return 0;
+	} else {
+		int sum{ 0 };
+		for (int i = 0; i < v.size(); i++) {
+			sum += v[i];
+		}
+		return sum;
 	}
-
-	return sum;
+	
+	
 }
 
 int Vector::max(const std::vector<int>& v) {
-	int largest = v[0];
-
-	for (int i = 1; i < v.size(); i++) {
-		if (v[i] > largest) {
-			largest = v[i];
+	
+	if (v.empty()) {
+		return 0;
+	} else {
+		int largest = v[0];
+		for (int i = 0; i < v.size(); i++) {
+			if (v[i] > largest) {
+				largest = v[i];
+			}
 		}
+		return largest;
 	}
 
-	return largest;
+	
 }
 
 int Vector::min(const std::vector<int>& v) {
-	int small = v[0];
-
-	for (int i = 1; i < v.size(); i++) {
-		if (v[i] < small) {
-			small = v[i];
+	
+	if (v.empty()) {
+		return 0;
+	} else {
+		int small = v[0];
+		for (int i = 1; i < v.size(); i++) {
+			if (v[i] < small) {
+				small = v[i];
+			}
 		}
+		return small;
 	}
 
-	return small;
 }
 
 double Vector::average(const std::vector<int>& v) {
-	double avg{ 0.0 };
-	double sum{ 0.0 };
-
-	for (int i = 0; i < v.size(); i++) {
-		sum += v[i];
+	
+	
+	if (v.empty()) {
+		return 0;
+	} else {
+		double avg{ 0.0 };
+		double sum{ 0.0 };
+		for (int i = 0; i < v.size(); i++) {
+			sum += v[i];
+		}
+		avg = sum / (double)v.size();
+		return avg;
 	}
-	avg = sum / (double)v.size();
-	return avg;
+	
 
 }

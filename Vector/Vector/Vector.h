@@ -5,9 +5,7 @@ private:
 	int size;
 
 public:
-	Vector();
 
-	Vector(int);
 
 	int sum(const std::vector<int>&);
 
